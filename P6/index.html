@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nilay Raj – Developer Portfolio</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Semantic Navigation Header -->
+  <header class="navbar">
+    <div class="nav-container">
+      <a href="#" class="brand-logo">Nilay Raj<span>.dev</span></a>
+      <nav class="nav-links">
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <a href="#contact" class="nav-cta">Let's Connect</a>
+    </div>
+  </header>
+
+  <!-- Semantic Main Region -->
+  <main>
+    
+    <!-- Hero Section -->
+    <section class="hero-section">
+      <div class="container hero-content">
+        <span class="eyebrow">Practical 06 · Full Semantic Portfolio Structure</span>
+        <h1 class="hero-title">Designing Resilient Web Interfaces &amp; Intelligent Systems</h1>
+        <p class="hero-lead">
+          I am a First-Year Computer Science &amp; Engineering (AIML) student combining web standards, 
+          accessible semantic architectures, and algorithmic problem-solving.
+        </p>
+        <div class="hero-actions">
+          <a href="#projects" class="btn btn-primary">Explore Projects</a>
+          <a href="#contact" class="btn btn-secondary">Get in Touch</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="section">
+      <div class="container">
+        <header class="section-header">
+          <h2 class="section-title">About Me</h2>
+          <p class="section-desc">My background, philosophy, and engineering interests.</p>
+        </header>
+        <div class="about-grid">
+          <article class="about-card">
+            <h3>Academic Background</h3>
+            <p>
+              Pursuing a Bachelor of Technology in Computer Science &amp; Engineering with a specialization in 
+              Artificial Intelligence and Machine Learning. Passionate about learning fundamental computing principles from the ground up.
+            </p>
+          </article>
+          <article class="about-card">
+            <h3>Engineering Philosophy</h3>
+            <p>
+              I believe in clean semantic markup, modular CSS architecture, and deliberate version control. Understanding how the browser 
+              renders pages produces faster, more accessible user experiences.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="section bg-light">
+      <div class="container">
+        <header class="section-header">
+          <h2 class="section-title">Technical Competencies</h2>
+          <p class="section-desc">Tools and technologies I employ in modern software workflows.</p>
+        </header>
+        <div class="skills-grid">
+          <article class="skill-group">
+            <h3>Frontend Development</h3>
+            <ul>
+              <li>HTML5 (Semantic Elements, Accessibility)</li>
+              <li>CSS3 (Flexbox, CSS Grid, Custom Properties)</li>
+              <li>Responsive Web Design</li>
+            </ul>
+          </article>
+          <article class="skill-group">
+            <h3>Languages &amp; Core CS</h3>
+            <ul>
+              <li>Python (Data analysis &amp; scripting)</li>
+              <li>Java (Object-oriented programming)</li>
+              <li>C / C++ (Data structures basics)</li>
+            </ul>
+          </article>
+          <article class="skill-group">
+            <h3>DevOps &amp; Tooling</h3>
+            <ul>
+              <li>Git &amp; GitHub (Branching, PRs, Version Tags)</li>
+              <li>Unix CLI / Zsh Navigation</li>
+              <li>VS Code &amp; Chrome DevTools</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="section">
+      <div class="container">
+        <header class="section-header">
+          <h2 class="section-title">Featured Projects</h2>
+          <p class="section-desc">A selection of laboratory assignments and experimental builds.</p>
+        </header>
+        <div class="projects-grid">
+          
+          <article class="project-card">
+            <div class="card-meta">Practical Lab Suite</div>
+            <h3>Web Development Lab Repository</h3>
+            <p>A modular suite of 13 practical assignments covering Git version control, semantic HTML5, Flexbox, and CSS Grid architectures.</p>
+            <div class="project-tags">
+              <span>HTML5</span>
+              <span>CSS3</span>
+              <span>Git</span>
+            </div>
+          </article>
+
+          <article class="project-card">
+            <div class="card-meta">Layout Engineering</div>
+            <h3>Newspaper Editorial Layout</h3>
+            <p>An editorial broadsheet design featuring multi-column article flows, drop-caps, and responsive CSS Grid areas.</p>
+            <div class="project-tags">
+              <span>CSS Grid</span>
+              <span>Typography</span>
+              <span>Responsive</span>
+            </div>
+          </article>
+
+          <article class="project-card">
+            <div class="card-meta">Interactive UI</div>
+            <h3>Responsive Card Matrix</h3>
+            <p>A high-performance product and project showcase component with sticky headers and absolute overlay interaction layers.</p>
+            <div class="project-tags">
+              <span>CSS Positioning</span>
+              <span>Flexbox</span>
+              <span>UI Design</span>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section bg-light">
+      <div class="container">
+        <header class="section-header">
+          <h2 class="section-title">Initiate Contact</h2>
+          <p class="section-desc">Feel free to reach out for questions, reviews, or collaborations.</p>
+        </header>
+        <div class="contact-wrapper">
+          <div class="contact-info">
+            <address>
+              <p><strong>Name:</strong> Nilay Raj</p>
+              <p><strong>Email:</strong> <a href="mailto:nilayraj713@gmail.com">nilayraj713@gmail.com</a></p>
+              <p><strong>GitHub:</strong> <a href="https://github.com/NilayOverp94" target="_blank" rel="noopener noreferrer">github.com/NilayOverp94</a></p>
+              <p><strong>Location:</strong> India</p>
+            </address>
+          </div>
+          <form class="contact-form" action="#" method="post" onsubmit="event.preventDefault(); alert('Message submitted successfully!');">
+            <div class="form-group">
+              <label for="contact-name">Full Name</label>
+              <input type="text" id="contact-name" name="name" required placeholder="e.g. John Doe">
+            </div>
+            <div class="form-group">
+              <label for="contact-email">Email Address</label>
+              <input type="email" id="contact-email" name="email" required placeholder="name@domain.com">
+            </div>
+            <div class="form-group">
+              <label for="contact-message">Message</label>
+              <textarea id="contact-message" name="message" rows="4" required placeholder="Write your message here..."></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary">Send Inquiry</button>
+          </form>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Semantic Page Footer -->
+  <footer class="footer">
+    <div class="container footer-content">
+      <p>&copy; <time datetime="2026">2026</time> Nilay Raj &middot; First Year B.Tech CSE (AIML). All rights reserved.</p>
+      <nav class="footer-nav">
+        <a href="#about">About</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </footer>
+
+</body>
+</html>

@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CSS Design Tokens &amp; Typography System</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="system-wrapper">
+    
+    <!-- System Header -->
+    <header class="system-header">
+      <span class="system-badge">Practical 07 · CSS Architecture</span>
+      <h1 class="system-title">Design Tokens &amp; Typography System</h1>
+      <p class="system-subtitle">
+        A structured, scalable token architecture built with CSS Custom Properties (Variables) to govern 
+        typographic hierarchy, color palettes, modular spacing, and elevation.
+      </p>
+    </header>
+
+    <main class="system-body">
+
+      <!-- Section 1: Typography System -->
+      <section class="token-section">
+        <div class="section-title-wrap">
+          <h2>1. Modular Typography Scale</h2>
+          <p>Hierarchical type definitions configured via <code>--font-size-*</code> and <code>--line-height-*</code> tokens.</p>
+        </div>
+
+        <div class="specimen-card">
+          <div class="specimen-row">
+            <span class="token-label">--font-size-5xl / 3.0rem</span>
+            <div class="specimen-render font-5xl weight-bold">Display Headline</div>
+          </div>
+          <div class="specimen-row">
+            <span class="token-label">--font-size-4xl / 2.25rem</span>
+            <div class="specimen-render font-4xl weight-bold">Heading Level 1</div>
+          </div>
+          <div class="specimen-row">
+            <span class="token-label">--font-size-3xl / 1.875rem</span>
+            <div class="specimen-render font-3xl weight-semibold">Heading Level 2</div>
+          </div>
+          <div class="specimen-row">
+            <span class="token-label">--font-size-2xl / 1.5rem</span>
+            <div class="specimen-render font-2xl weight-semibold">Heading Level 3</div>
+          </div>
+          <div class="specimen-row">
+            <span class="token-label">--font-size-xl / 1.25rem</span>
+            <div class="specimen-render font-xl weight-medium">Subheading &amp; Section Lead</div>
+          </div>
+          <div class="specimen-row">
+            <span class="token-label">--font-size-base / 1.0rem</span>
+            <div class="specimen-render font-base">
+              Standard body copy optimized for long-form readability. Designed with generous line height and optimal character contrast.
+            </div>
+          </div>
+          <div class="specimen-row">
+            <span class="token-label">--font-mono / 0.875rem</span>
+            <div class="specimen-render font-mono font-sm">
+              const token = { scale: 'modular', unit: 'rem' };
+            </div>
+          </div>
+          <div class="specimen-row">
+            <span class="token-label">--font-size-xs / 0.75rem</span>
+            <div class="specimen-render font-xs text-muted">
+              METADATA LABELS · CAPTION TEXT · COPYRIGHT ANNOTATIONS
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section 2: Color Palette Tokens -->
+      <section class="token-section">
+        <div class="section-title-wrap">
+          <h2>2. Color Palette Tokens</h2>
+          <p>Semantic roles mapped to hex definitions ensuring consistent accessibility and theming.</p>
+        </div>
+
+        <div class="swatches-grid">
+          <div class="swatch-card">
+            <div class="swatch-color" style="background-color: var(--color-primary);"></div>
+            <div class="swatch-details">
+              <strong>Primary Brand</strong>
+              <code>--color-primary</code>
+              <span>#2563eb</span>
+            </div>
+          </div>
+          <div class="swatch-card">
+            <div class="swatch-color" style="background-color: var(--color-primary-dark);"></div>
+            <div class="swatch-details">
+              <strong>Primary Dark</strong>
+              <code>--color-primary-dark</code>
+              <span>#1d4ed8</span>
+            </div>
+          </div>
+          <div class="swatch-card">
+            <div class="swatch-color" style="background-color: var(--color-accent);"></div>
+            <div class="swatch-details">
+              <strong>Accent Amber</strong>
+              <code>--color-accent</code>
+              <span>#f59e0b</span>
+            </div>
+          </div>
+          <div class="swatch-card">
+            <div class="swatch-color" style="background-color: var(--color-success);"></div>
+            <div class="swatch-details">
+              <strong>Success Emerald</strong>
+              <code>--color-success</code>
+              <span>#10b981</span>
+            </div>
+          </div>
+          <div class="swatch-card">
+            <div class="swatch-color" style="background-color: var(--color-text-main);"></div>
+            <div class="swatch-details">
+              <strong>Neutral Main</strong>
+              <code>--color-text-main</code>
+              <span>#0f172a</span>
+            </div>
+          </div>
+          <div class="swatch-card">
+            <div class="swatch-color" style="background-color: var(--color-text-muted);"></div>
+            <div class="swatch-details">
+              <strong>Neutral Muted</strong>
+              <code>--color-text-muted</code>
+              <span>#64748b</span>
+            </div>
+          </div>
+          <div class="swatch-card">
+            <div class="swatch-color" style="background-color: var(--color-bg-subtle); border: 1px solid var(--color-border);"></div>
+            <div class="swatch-details">
+              <strong>Subtle Surface</strong>
+              <code>--color-bg-subtle</code>
+              <span>#f8fafc</span>
+            </div>
+          </div>
+          <div class="swatch-card">
+            <div class="swatch-color" style="background-color: var(--color-surface); border: 1px solid var(--color-border);"></div>
+            <div class="swatch-details">
+              <strong>Surface White</strong>
+              <code>--color-surface</code>
+              <span>#ffffff</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section 3: Spacing & Radius Scales -->
+      <section class="token-section">
+        <div class="section-title-wrap">
+          <h2>3. Spacing &amp; Border Radius Scale</h2>
+          <p>Consistent 4px/8px modular rhythm applied across margins, padding, and corner rounding.</p>
+        </div>
+
+        <div class="spacing-container">
+          <div class="spacing-bar-item">
+            <span>--space-2 (8px)</span>
+            <div class="bar" style="width: var(--space-2);"></div>
+          </div>
+          <div class="spacing-bar-item">
+            <span>--space-4 (16px)</span>
+            <div class="bar" style="width: var(--space-4);"></div>
+          </div>
+          <div class="spacing-bar-item">
+            <span>--space-6 (24px)</span>
+            <div class="bar" style="width: var(--space-6);"></div>
+          </div>
+          <div class="spacing-bar-item">
+            <span>--space-8 (32px)</span>
+            <div class="bar" style="width: var(--space-8);"></div>
+          </div>
+          <div class="spacing-bar-item">
+            <span>--space-12 (48px)</span>
+            <div class="bar" style="width: var(--space-12);"></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section 4: Component Composition -->
+      <section class="token-section">
+        <div class="section-title-wrap">
+          <h2>4. Component Composition Preview</h2>
+          <p>Demonstration of tokens composed into interactive UI elements.</p>
+        </div>
+
+        <div class="component-demo">
+          <article class="demo-card">
+            <span class="demo-badge">Design Token Showcase</span>
+            <h3>UI Card Component</h3>
+            <p>This component utilizes <code>--color-surface</code>, <code>--radius-md</code>, <code>--space-6</code> padding, and typography tokens to guarantee visual harmony.</p>
+            <div class="demo-actions">
+              <button class="btn-token btn-primary">Primary Token Action</button>
+              <button class="btn-token btn-outline">Secondary Action</button>
+            </div>
+          </article>
+        </div>
+      </section>
+
+    </main>
+
+    <footer class="system-footer">
+      <p>Practical 07 &middot; Designed by Nilay Raj &middot; Web Development Lab</p>
+    </footer>
+
+  </div>
+
+</body>
+</html>

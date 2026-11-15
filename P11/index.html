@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Practical 11 – Newspaper Three-Column Layout with CSS Grid</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="broadsheet-wrapper">
+    
+    <!-- Top Newspaper Header & Meta -->
+    <header class="masthead">
+      <div class="masthead-top">
+        <span>VOL. LXXVIII · NO. 42</span>
+        <span>ACADEMIC &amp; ENGINEERING DISPATCH</span>
+        <span>NOVEMBER 2026 &middot; PRICELESS</span>
+      </div>
+
+      <div class="masthead-title">
+        <h1>THE CHRONICLE HERALD</h1>
+        <p class="masthead-tagline">"The Independent Journal of Computing, Layout Systems &amp; Web Standards"</p>
+      </div>
+
+      <div class="masthead-meta-bar">
+        <span>CAMPUS EDITION</span>
+        <span>WEATHER: CLEAR · 22°C</span>
+        <span>LABORATORY PRACTICAL 11</span>
+        <span>NILAY RAJ, EDITOR</span>
+      </div>
+    </header>
+
+    <!-- Three-Column CSS Grid Layout -->
+    <main class="newspaper-grid">
+      
+      <!-- Primary Feature Story (Left Column - Spanning Prominently) -->
+      <article class="grid-story lead-story">
+        <span class="category-kicker">FRONT PAGE · LEAD REPORT</span>
+        <h2 class="lead-headline">Modern CSS Grid Replaces Decades of Fragile Layout Workarounds</h2>
+        <p class="story-dek">
+          Engineers and developers celebrate the declarative power of two-dimensional grid tracks, 
+          relegating float clearing and table hacks to historical archives.
+        </p>
+        
+        <div class="story-columns">
+          <p class="dropcap-paragraph">
+            The evolution of web document architecture reached a definitive milestone with the standardization of CSS Grid. 
+            For decades, web authors struggled against the limits of the normal document flow, employing elaborate float clearfixes, 
+            inline-block quirks, and rigid CSS frameworks that polluted the HTML markup with presentation-heavy wrapper divs.
+          </p>
+          <p>
+            With the adoption of <code>display: grid</code>, designers and developers now enjoy native two-dimensional layout control. 
+            Unlike earlier one-dimensional systems that operated either strictly across rows or down columns, CSS Grid introduces explicit 
+            coordinate systems where rows and columns are declared simultaneously.
+          </p>
+          <blockquote class="newspaper-quote">
+            "CSS Grid gives authors true structural layout freedom without compromising semantic markup."
+          </blockquote>
+          <p>
+            By separating source order in semantic HTML from visual display via properties such as <code>grid-template-areas</code> 
+            and <code>grid-column-start</code>, assistive technologies receive pristine document structure while desktop viewports 
+            render complex, multi-tiered editorial spreads.
+          </p>
+        </div>
+      </article>
+
+      <!-- Center Secondary Column -->
+      <section class="grid-story secondary-story">
+        <span class="category-kicker">TECHNICAL ANALYSIS</span>
+        <h3 class="secondary-headline">Semantic HTML Meets Native Browser Layouts</h3>
+        <p>
+          Semantic elements like <code>&lt;article&gt;</code>, <code>&lt;aside&gt;</code>, and <code>&lt;header&gt;</code> 
+          mesh seamlessly with grid items. When semantic tags act directly as grid cells, developers achieve cleaner codebases 
+          with significantly reduced bundle sizes.
+        </p>
+
+        <div class="divider-line"></div>
+
+        <span class="category-kicker">WORKFLOW INNOVATION</span>
+        <h3 class="secondary-headline">Git Feature Branches in Campus Teams</h3>
+        <p>
+          Student development teams report dramatic reductions in merge conflicts by pairing atomic feature branches with 
+          continuous integration, ensuring stable production releases across major project milestones.
+        </p>
+
+        <div class="story-callout">
+          <strong>Key Takeaway:</strong> Declarative layouts reduce design overhead while ensuring multi-device consistency.
+        </div>
+      </section>
+
+      <!-- Right Editorial & Sidebar Column -->
+      <aside class="grid-story editorial-column">
+        <div class="editorial-box">
+          <span class="category-kicker">OPINION &amp; ESSAY</span>
+          <h3 class="editorial-headline">The Craft of Digital Typography</h3>
+          <p class="byline">By Nilay Raj</p>
+          <p>
+            Typography in editorial design is not merely decoration—it is the cadence of human thought rendered in visual glyphs. 
+            A robust modular scale, paired with disciplined column hierarchy, guides the reader effortlessly through intricate narratives.
+          </p>
+        </div>
+
+        <div class="news-briefs-box">
+          <h4>CAMPUS BRIEFS</h4>
+          <ul class="briefs-list">
+            <li>
+              <strong>Flexbox vs. Grid Seminar:</strong> Module 3 hands-on workshop opens for student registration.
+            </li>
+            <li>
+              <strong>Git Release v1.0.0:</strong> All laboratory exercises validated under strict semantic criteria.
+            </li>
+            <li>
+              <strong>Accessibility Review:</strong> Focus states and contrast audit pass compliance with zero errors.
+            </li>
+          </ul>
+        </div>
+      </aside>
+
+    </main>
+
+    <!-- Newspaper Footer -->
+    <footer class="newspaper-footer">
+      <div class="footer-rule"></div>
+      <p>PRINTED &amp; PUBLISHED BY THE STUDENT EDITORIAL GUILD &middot; PRACTICAL 11 CSS GRID &middot; © 2026 NILAY RAJ</p>
+    </footer>
+
+  </div>
+
+</body>
+</html>

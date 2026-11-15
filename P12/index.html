@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Practical 12 – Advanced CSS Grid Portfolio Projects</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="portfolio-container">
+    
+    <!-- Header -->
+    <header class="gallery-header">
+      <span class="eyebrow">Practical 12 · Advanced CSS Grid</span>
+      <h1 class="gallery-title">Portfolio Projects Bento Matrix</h1>
+      <p class="gallery-subtitle">
+        An asymmetric 12-column bento grid utilizing <code>grid-column: span</code>, <code>grid-row: span</code>, 
+        and fluid tracks to present diverse project formats with dynamic visual weight.
+      </p>
+    </header>
+
+    <!-- 12-Column Advanced Bento Grid -->
+    <main class="bento-grid">
+      
+      <!-- Card 1: Featured Major Project (Span 8 cols) -->
+      <article class="bento-card card-featured">
+        <div class="card-top">
+          <span class="badge-featured">Flagship Project · Span 8</span>
+          <span class="project-year">2026</span>
+        </div>
+        <div class="card-body">
+          <h2>Web Development Laboratory System</h2>
+          <p class="project-description">
+            A comprehensive, modular suite of 13 web engineering practicals covering Git feature branching, 
+            semantic HTML5 hierarchies, custom design token architectures, and advanced CSS Grid layouts.
+          </p>
+          <div class="card-tags">
+            <span class="tech-pill">Semantic HTML5</span>
+            <span class="tech-pill">CSS Grid 12-Col</span>
+            <span class="tech-pill">Flexbox 1D</span>
+            <span class="tech-pill">Git / GitHub</span>
+          </div>
+        </div>
+        <div class="card-footer">
+          <a href="https://github.com/NilayOverp94/Web_Dev_Lab" target="_blank" rel="noopener noreferrer" class="link-btn">
+            View Source Code &rarr;
+          </a>
+        </div>
+      </article>
+
+      <!-- Card 2: Spotlight / Tall Metric Card (Span 4 cols) -->
+      <article class="bento-card card-spotlight">
+        <div class="card-top">
+          <span class="badge-accent">Spotlight · Span 4</span>
+        </div>
+        <div class="metric-display">
+          <span class="metric-value">100%</span>
+          <span class="metric-label">Semantic Compliance</span>
+        </div>
+        <h3>Zero Div-Soup Philosophy</h3>
+        <p>Every element uses standard HTML5 tags (<code>main</code>, <code>article</code>, <code>section</code>, <code>aside</code>) ensuring native accessibility.</p>
+      </article>
+
+      <!-- Card 3: Editorial Grid Layout (Span 4 cols) -->
+      <article class="bento-card card-medium">
+        <div class="card-top">
+          <span class="badge-default">Editorial Design</span>
+        </div>
+        <h3>The Chronicle Broadsheet</h3>
+        <p>Classic three-column newspaper layout using named grid areas, multi-column CSS text flows, and responsive collapses.</p>
+        <div class="card-tags">
+          <span class="tech-pill">CSS Grid Areas</span>
+          <span class="tech-pill">Typography</span>
+        </div>
+      </article>
+
+      <!-- Card 4: Design Token Engine (Span 4 cols) -->
+      <article class="bento-card card-medium">
+        <div class="card-top">
+          <span class="badge-default">CSS Architecture</span>
+        </div>
+        <h3>Modular Design Tokens</h3>
+        <p>Dynamic token variables governing color shades, 1.25 modular typography scale, and 8px baseline spacing rules.</p>
+        <div class="card-tags">
+          <span class="tech-pill">Custom Properties</span>
+          <span class="tech-pill">Modular Scale</span>
+        </div>
+      </article>
+
+      <!-- Card 5: Interactive Positioning (Span 4 cols) -->
+      <article class="bento-card card-medium">
+        <div class="card-top">
+          <span class="badge-default">UI Components</span>
+        </div>
+        <h3>Sticky Navbar &amp; Overlays</h3>
+        <p>Positioning orchestration featuring sticky viewport anchors and relative/absolute card overlay hover mechanics.</p>
+        <div class="card-tags">
+          <span class="tech-pill">position: sticky</span>
+          <span class="tech-pill">position: absolute</span>
+        </div>
+      </article>
+
+      <!-- Card 6: AI/ML Exploration (Span 6 cols) -->
+      <article class="bento-card card-half">
+        <div class="card-top">
+          <span class="badge-secondary">Machine Learning</span>
+        </div>
+        <h3>Model Evaluation Dashboard</h3>
+        <p>Interactive metric visualization platform tracking model convergence, loss curves, and classification confusion matrices.</p>
+        <div class="card-tags">
+          <span class="tech-pill">Python</span>
+          <span class="tech-pill">Data Vis</span>
+          <span class="tech-pill">Grid Dashboard</span>
+        </div>
+      </article>
+
+      <!-- Card 7: Git Workflow System (Span 6 cols) -->
+      <article class="bento-card card-half">
+        <div class="card-top">
+          <span class="badge-secondary">DevOps &amp; CLI</span>
+        </div>
+        <h3>Feature-Branch Automation</h3>
+        <p>Streamlined branch synchronization scripts ensuring atomic commits, SemVer release tagging, and clean GitHub push tracking.</p>
+        <div class="card-tags">
+          <span class="tech-pill">Git Hooks</span>
+          <span class="tech-pill">Bash / Zsh</span>
+          <span class="tech-pill">SemVer</span>
+        </div>
+      </article>
+
+    </main>
+
+    <footer class="gallery-footer">
+      <p>&copy; 2026 Nilay Raj &middot; Web Development Lab &middot; Practical 12 Advanced CSS Grid</p>
+    </footer>
+
+  </div>
+
+</body>
+</html>

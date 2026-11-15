@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Practical 10 – Advanced Flexbox Header &amp; Footer</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Top Utility Bar (Flexbox) -->
+  <aside class="utility-bar">
+    <div class="container utility-content">
+      <div class="utility-left">
+        <span>Available for internships &amp; collaborative builds &middot; 2026</span>
+      </div>
+      <div class="utility-right">
+        <a href="mailto:nilayraj713@gmail.com">nilayraj713@gmail.com</a>
+        <span class="divider">|</span>
+        <a href="https://github.com/NilayOverp94" target="_blank" rel="noopener noreferrer">GitHub</a>
+      </div>
+    </div>
+  </aside>
+
+  <!-- Advanced Flexbox Header -->
+  <header class="main-header">
+    <div class="container header-content">
+      
+      <!-- Brand Logo (Flex item 1) -->
+      <a href="#" class="brand-logo">
+        <span class="logo-mark">NR</span>
+        <span class="logo-text">Nilay Raj<span>.dev</span></span>
+      </a>
+
+      <!-- Primary Navigation (Flex item 2, centered) -->
+      <nav class="primary-nav">
+        <a href="#about" class="nav-item active">About</a>
+        <a href="#architecture" class="nav-item">Flex Architecture</a>
+        <a href="#projects" class="nav-item">Projects</a>
+        <a href="#contact" class="nav-item">Contact</a>
+      </nav>
+
+      <!-- Action Button Group (Flex item 3) -->
+      <div class="header-actions">
+        <a href="#contact" class="btn btn-outline">Schedule Chat</a>
+        <a href="https://github.com/NilayOverp94/Web_Dev_Lab" target="_blank" rel="noopener noreferrer" class="btn btn-primary">Lab Repo &rarr;</a>
+      </div>
+
+    </div>
+  </header>
+
+  <!-- Page Body -->
+  <main class="page-main">
+    <div class="container">
+      
+      <!-- Showcase Hero -->
+      <section class="hero-showcase">
+        <span class="eyebrow">Practical 10 · Advanced Flexbox Layouts</span>
+        <h1>Advanced Flexbox: Header &amp; Footer Systems</h1>
+        <p class="lead">
+          Demonstrating multi-tier alignment, flex ordering (<code>order</code>), space distribution, 
+          and resilient cross-device collapse inside sophisticated website framing components.
+        </p>
+      </section>
+
+      <!-- Architectural Mechanics Section -->
+      <section id="architecture" class="features-grid">
+        <article class="feature-card">
+          <div class="card-number">01</div>
+          <h3>Multi-Tier Header Distribution</h3>
+          <p>Combines a top utility bar with a sticky main navigation bar using <code>justify-content: space-between</code> and <code>align-items: center</code>.</p>
+        </article>
+
+        <article class="feature-card">
+          <div class="card-number">02</div>
+          <h3>Dynamic Order Reconfiguration</h3>
+          <p>Utilizes the CSS <code>order</code> property within media queries to reorder navigation and call-to-actions without altering HTML structure.</p>
+        </article>
+
+        <article class="feature-card">
+          <div class="card-number">03</div>
+          <h3>Multi-Column Flex Footer</h3>
+          <p>The footer implements a wrapping flex container with <code>flex: 1 1 200px</code> column segments and nested vertical stacks.</p>
+        </article>
+      </section>
+
+    </div>
+  </main>
+
+  <!-- Advanced Flexbox Multi-Column Footer -->
+  <footer id="contact" class="main-footer">
+    <div class="container">
+      
+      <!-- Top Footer Section with Columns -->
+      <div class="footer-columns">
+        
+        <!-- Column 1: Brand & Bio (Wider basis) -->
+        <div class="footer-col col-brand">
+          <div class="footer-brand">
+            <span class="logo-mark">NR</span>
+            <strong>Nilay Raj</strong>
+          </div>
+          <p class="brand-desc">
+            First Year B.Tech CSE (AIML) Student building clean, accessible, and performant web interfaces.
+          </p>
+          <div class="newsletter-widget">
+            <form class="newsletter-form" onsubmit="event.preventDefault(); alert('Subscribed!');">
+              <input type="email" placeholder="Enter your email" required>
+              <button type="submit">Join</button>
+            </form>
+          </div>
+        </div>
+
+        <!-- Column 2: Navigation Links -->
+        <div class="footer-col">
+          <h4>Navigation</h4>
+          <ul class="footer-links">
+            <li><a href="#about">About Overview</a></li>
+            <li><a href="#architecture">Architecture</a></li>
+            <li><a href="#projects">Laboratory Work</a></li>
+            <li><a href="https://github.com/NilayOverp94">GitHub Profile</a></li>
+          </ul>
+        </div>
+
+        <!-- Column 3: Syllabus Modules -->
+        <div class="footer-col">
+          <h4>Lab Modules</h4>
+          <ul class="footer-links">
+            <li><a href="../P1/Readme.md">M1: Git &amp; CLI</a></li>
+            <li><a href="../P5/index.html">M2: HTML &amp; CSS</a></li>
+            <li><a href="../P10/index.html">M3: Layout Systems</a></li>
+            <li><a href="../P13/index.html">Flex vs Grid</a></li>
+          </ul>
+        </div>
+
+        <!-- Column 4: Contact & Socials -->
+        <div class="footer-col">
+          <h4>Connect</h4>
+          <ul class="footer-links">
+            <li><a href="mailto:nilayraj713@gmail.com">nilayraj713@gmail.com</a></li>
+            <li><a href="https://github.com/NilayOverp94" target="_blank" rel="noopener noreferrer">GitHub / NilayOverp94</a></li>
+            <li><span class="status-indicator"><span class="dot"></span> Online</span></li>
+          </ul>
+        </div>
+
+      </div>
+
+      <!-- Bottom Bar (Flex Sub-Footer) -->
+      <div class="footer-bottom">
+        <p>&copy; 2026 Nilay Raj &middot; Web Development Lab. All rights reserved.</p>
+        <div class="bottom-links">
+          <a href="#">Privacy Policy</a>
+          <span class="divider">&middot;</span>
+          <a href="#">Terms of Use</a>
+          <span class="divider">&middot;</span>
+          <a href="#">Back to Top &uarr;</a>
+        </div>
+      </div>
+
+    </div>
+  </footer>
+
+</body>
+</html>

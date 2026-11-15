@@ -1,0 +1,379 @@
+/* Practical 13: Choosing Between Flexbox and Grid for a Shared Layout */
+
+:root {
+  --primary: #2563eb;
+  --indigo: #4f46e5;
+  --dark: #0f172a;
+  --dark-surface: #1e293b;
+  --text-main: #334155;
+  --text-muted: #64748b;
+  --bg-page: #f8fafc;
+  --bg-card: #ffffff;
+  --border-light: #e2e8f0;
+  --radius-lg: 16px;
+  --radius-md: 10px;
+  --radius-sm: 6px;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  background-color: var(--bg-page);
+  color: var(--text-main);
+  line-height: 1.6;
+  padding: 40px 20px;
+}
+
+.comparison-container {
+  max-width: 1080px;
+  margin: 0 auto;
+}
+
+/* Header */
+.page-header {
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto 48px;
+}
+
+.eyebrow {
+  display: inline-block;
+  font-size: 0.78rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--primary);
+  background: #eff6ff;
+  padding: 6px 14px;
+  border-radius: 20px;
+  margin-bottom: 16px;
+}
+
+.page-title {
+  font-size: 2.6rem;
+  font-weight: 800;
+  color: var(--dark);
+  margin-bottom: 14px;
+}
+
+.page-lead {
+  font-size: 1.1rem;
+  color: var(--text-muted);
+}
+
+.section {
+  margin-bottom: 56px;
+}
+
+.section-title {
+  font-size: 1.6rem;
+  color: var(--dark);
+  margin-bottom: 20px;
+}
+
+/* ==========================================================================
+   1. Matrix Table
+   ========================================================================== */
+.table-wrapper {
+  background: var(--bg-card);
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-lg);
+  overflow-x: auto;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.04);
+}
+
+.matrix-table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+  font-size: 0.95rem;
+}
+
+.matrix-table th {
+  background: #f1f5f9;
+  padding: 16px 20px;
+  font-weight: 700;
+  color: var(--dark);
+  border-bottom: 1px solid var(--border-light);
+}
+
+.matrix-table td {
+  padding: 16px 20px;
+  border-bottom: 1px solid var(--border-light);
+  vertical-align: top;
+}
+
+.matrix-table tr:last-child td {
+  border-bottom: none;
+}
+
+/* ==========================================================================
+   2. Scenario Demos
+   ========================================================================== */
+.scenario-header {
+  margin-bottom: 20px;
+}
+
+.scenario-header h2 {
+  font-size: 1.5rem;
+  color: var(--dark);
+  margin: 8px 0 4px;
+}
+
+.scenario-header p {
+  color: var(--text-muted);
+}
+
+.tag-flex {
+  display: inline-block;
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: #0284c7;
+  background: #e0f2fe;
+  padding: 4px 10px;
+  border-radius: 20px;
+  text-transform: uppercase;
+}
+
+.tag-grid {
+  display: inline-block;
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: #7c3aed;
+  background: #ede9fe;
+  padding: 4px 10px;
+  border-radius: 20px;
+  text-transform: uppercase;
+}
+
+.tag-hybrid {
+  display: inline-block;
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: #059669;
+  background: #d1fae5;
+  padding: 4px 10px;
+  border-radius: 20px;
+  text-transform: uppercase;
+}
+
+.demo-box {
+  background: var(--bg-card);
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-lg);
+  padding: 24px;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.04);
+}
+
+.demo-caption {
+  margin-top: 16px;
+  font-size: 0.88rem;
+  color: var(--text-muted);
+}
+
+/* Flex Toolbar Demo */
+.flex-toolbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 16px;
+  padding: 12px 18px;
+  background: #f1f5f9;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--border-light);
+}
+
+.toolbar-group {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.toolbar-brand {
+  font-weight: 800;
+  color: var(--dark);
+  margin-right: 8px;
+}
+
+.tool-btn {
+  background: #ffffff;
+  border: 1px solid var(--border-light);
+  padding: 6px 14px;
+  border-radius: var(--radius-sm);
+  font-size: 0.85rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.tool-btn.active {
+  background: var(--primary);
+  color: #ffffff;
+  border-color: var(--primary);
+}
+
+.toolbar-search input {
+  padding: 6px 14px;
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-sm);
+  font-size: 0.85rem;
+}
+
+.toolbar-user {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.avatar-pill {
+  width: 32px;
+  height: 32px;
+  background: var(--primary);
+  color: #ffffff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.75rem;
+  font-weight: 700;
+}
+
+.btn-share {
+  background: var(--dark);
+  color: #ffffff;
+  border: none;
+  padding: 6px 14px;
+  border-radius: var(--radius-sm);
+  font-size: 0.85rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+/* CSS Grid Dashboard Demo */
+.grid-dashboard {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+}
+
+.grid-cell {
+  background: #f8fafc;
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-md);
+  padding: 20px;
+}
+
+.cell-kpi {
+  grid-column: span 1;
+}
+
+.cell-label {
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: var(--text-muted);
+}
+
+.cell-kpi h3 {
+  font-size: 1.8rem;
+  color: var(--dark);
+  margin: 6px 0;
+}
+
+.cell-kpi small {
+  color: #059669;
+  font-weight: 600;
+}
+
+.cell-chart {
+  grid-column: span 2;
+  display: flex;
+  flex-direction: column;
+}
+
+.fake-chart {
+  display: flex;
+  align-items: flex-end;
+  gap: 12px;
+  height: 90px;
+  padding-top: 12px;
+}
+
+.fake-chart .bar {
+  flex-grow: 1;
+  background: var(--primary);
+  border-radius: 4px 4px 0 0;
+}
+
+.cell-activity {
+  grid-column: span 4;
+}
+
+.cell-activity ul {
+  list-style: none;
+  margin-top: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  font-size: 0.88rem;
+}
+
+.cell-activity code {
+  background: #e2e8f0;
+  padding: 2px 6px;
+  border-radius: 4px;
+  font-size: 0.82rem;
+}
+
+/* Hybrid Ideal Box */
+.hybrid-card {
+  background: linear-gradient(135deg, #1e293b, #0f172a);
+  color: #ffffff;
+  padding: 36px;
+  border-radius: var(--radius-lg);
+}
+
+.blueprint-badge {
+  display: inline-block;
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: #6ee7b7;
+  margin-bottom: 12px;
+}
+
+.hybrid-card h3 {
+  font-size: 1.6rem;
+  margin-bottom: 12px;
+}
+
+.hybrid-card p {
+  color: #cbd5e1;
+  line-height: 1.7;
+  max-width: 800px;
+}
+
+/* Footer */
+.page-footer {
+  text-align: center;
+  padding-top: 32px;
+  border-top: 1px solid var(--border-light);
+  color: var(--text-muted);
+  font-size: 0.9rem;
+}
+
+/* Responsive */
+@media (max-width: 800px) {
+  .grid-dashboard {
+    grid-template-columns: 1fr;
+  }
+  .cell-kpi, .cell-chart, .cell-activity {
+    grid-column: span 1;
+  }
+}

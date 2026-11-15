@@ -1,0 +1,246 @@
+/* Practical 05: Semantic Bio Page Styles */
+
+:root {
+  --primary: #2563eb;
+  --primary-dark: #1d4ed8;
+  --primary-light: #eff6ff;
+  --text-main: #1e293b;
+  --text-muted: #64748b;
+  --bg-page: #f8fafc;
+  --bg-card: #ffffff;
+  --border-color: #e2e8f0;
+  --radius-lg: 14px;
+  --radius-sm: 8px;
+  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.05);
+  --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+  background-color: var(--bg-page);
+  color: var(--text-main);
+  line-height: 1.65;
+  padding: 32px 16px;
+}
+
+/* Header */
+.bio-header {
+  max-width: 1040px;
+  margin: 0 auto 32px;
+  background: var(--bg-card);
+  padding: 32px;
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--border-color);
+  box-shadow: var(--shadow-sm);
+}
+
+.header-inner {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+.avatar-badge {
+  width: 76px;
+  height: 76px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--primary), #4f46e5);
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.8rem;
+  font-weight: 700;
+  flex-shrink: 0;
+}
+
+.eyebrow-tag {
+  display: inline-block;
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--primary);
+  background-color: var(--primary-light);
+  padding: 4px 10px;
+  border-radius: 20px;
+  margin-bottom: 6px;
+}
+
+.bio-name {
+  font-size: 2.1rem;
+  font-weight: 800;
+  color: var(--text-main);
+  line-height: 1.2;
+}
+
+.bio-role {
+  color: var(--text-muted);
+  font-size: 1.05rem;
+}
+
+/* Layout */
+.bio-layout {
+  max-width: 1040px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 28px;
+}
+
+.primary-content {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.bio-sidebar {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.bio-card {
+  background: var(--bg-card);
+  padding: 28px;
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--border-color);
+  box-shadow: var(--shadow-sm);
+}
+
+.bio-card h2 {
+  font-size: 1.35rem;
+  color: var(--text-main);
+  margin-bottom: 14px;
+  padding-bottom: 8px;
+  border-bottom: 2px solid var(--primary-light);
+}
+
+.bio-card h3 {
+  font-size: 1.1rem;
+  margin-bottom: 12px;
+}
+
+.bio-card p {
+  color: var(--text-muted);
+  margin-bottom: 12px;
+}
+
+.bio-card p:last-child {
+  margin-bottom: 0;
+}
+
+/* Cards Grid inside section */
+.cards-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 16px;
+  margin-top: 14px;
+}
+
+.interest-item {
+  padding: 16px;
+  background: var(--bg-page);
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--border-color);
+}
+
+.interest-item h3 {
+  font-size: 1.02rem;
+  color: var(--primary-dark);
+  margin-bottom: 6px;
+}
+
+.interest-item p {
+  font-size: 0.92rem;
+  color: var(--text-muted);
+}
+
+/* Skill Tags */
+.skill-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 8px;
+}
+
+.tag {
+  background: var(--primary-light);
+  color: var(--primary-dark);
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-size: 0.88rem;
+  font-weight: 600;
+  border: 1px solid #dbeafe;
+}
+
+/* Profile Metadata */
+.profile-meta {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 10px 14px;
+  font-size: 0.95rem;
+}
+
+.profile-meta dt {
+  font-weight: 600;
+  color: var(--text-main);
+}
+
+.profile-meta dd {
+  color: var(--text-muted);
+}
+
+.profile-meta a {
+  color: var(--primary);
+  text-decoration: none;
+}
+
+.profile-meta a:hover {
+  text-decoration: underline;
+}
+
+.action-btn {
+  display: inline-block;
+  margin-top: 14px;
+  background: var(--primary);
+  color: #ffffff;
+  padding: 10px 20px;
+  border-radius: var(--radius-sm);
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.92rem;
+  transition: background 0.2s ease;
+}
+
+.action-btn:hover {
+  background: var(--primary-dark);
+}
+
+/* Footer */
+.bio-footer {
+  max-width: 1040px;
+  margin: 36px auto 0;
+  text-align: center;
+  font-size: 0.88rem;
+  color: var(--text-muted);
+  padding-top: 20px;
+  border-top: 1px solid var(--border-color);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .bio-layout {
+    grid-template-columns: 1fr;
+  }
+  .header-inner {
+    flex-direction: column;
+    text-align: center;
+  }
+}

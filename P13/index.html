@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Practical 13 – Choosing Between Flexbox and Grid for a Shared Layout</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="comparison-container">
+    
+    <!-- Header -->
+    <header class="page-header">
+      <span class="eyebrow">Practical 13 · Architectural Decision Matrix</span>
+      <h1 class="page-title">Flexbox vs. CSS Grid in Modern Layouts</h1>
+      <p class="page-lead">
+        A practical comparative study evaluating when to employ one-dimensional Flexbox (Content-Driven) 
+        versus two-dimensional CSS Grid (Layout-Driven) across shared component architectures.
+      </p>
+    </header>
+
+    <main class="page-content">
+
+      <!-- Architectural Matrix Table -->
+      <section class="section">
+        <h2 class="section-title">1. Theoretical Comparison Matrix</h2>
+        <div class="table-wrapper">
+          <table class="matrix-table">
+            <thead>
+              <tr>
+                <th>Feature / Dimension</th>
+                <th>CSS Flexbox (1D)</th>
+                <th>CSS Grid (2D)</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>Dimensionality</strong></td>
+                <td>Single direction at a time (Row <em>or</em> Column)</td>
+                <td>Two-dimensional simultaneous (Rows <em>and</em> Columns)</td>
+              </tr>
+              <tr>
+                <td><strong>Core Philosophy</strong></td>
+                <td>Content-Out: Items dictate their size and push space</td>
+                <td>Container-In: Container defines rigid tracks; items occupy slots</td>
+              </tr>
+              <tr>
+                <td><strong>Wrapping Behavior</strong></td>
+                <td>Wrapped items flow independently across lines</td>
+                <td>Wrapped items align strictly with column track lines</td>
+              </tr>
+              <tr>
+                <td><strong>Item Overlapping</strong></td>
+                <td>Requires manual negative margins or positioning hacks</td>
+                <td>Native support via overlapping grid cell coordinates</td>
+              </tr>
+              <tr>
+                <td><strong>Primary Sweet Spot</strong></td>
+                <td>Navbars, button groups, linear component internals</td>
+                <td>Page layouts, bento grids, editorial spreads, dashboards</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <!-- Scenario 1: Where Flexbox Excels -->
+      <section class="section">
+        <div class="scenario-header">
+          <span class="tag-flex">Flexbox Optimal</span>
+          <h2>2. Linear Component: Application Toolbar</h2>
+          <p>Flexbox excels where items have varying intrinsic widths and need linear alignment with dynamic spacing.</p>
+        </div>
+
+        <div class="demo-box flex-demo-wrapper">
+          <div class="flex-toolbar">
+            <div class="toolbar-group">
+              <span class="toolbar-brand">StudioBar</span>
+              <button class="tool-btn active">Design</button>
+              <button class="tool-btn">Prototype</button>
+              <button class="tool-btn">Inspect</button>
+            </div>
+            <div class="toolbar-search">
+              <input type="text" placeholder="Filter layers...">
+            </div>
+            <div class="toolbar-user">
+              <span class="avatar-pill">NR</span>
+              <button class="btn-share">Share</button>
+            </div>
+          </div>
+          <p class="demo-caption">
+            <code>display: flex</code> effortlessly pushes groups apart with <code>justify-content: space-between</code> 
+            without specifying rigid columns.
+          </p>
+        </div>
+      </section>
+
+      <!-- Scenario 2: Where CSS Grid Excels -->
+      <section class="section">
+        <div class="scenario-header">
+          <span class="tag-grid">Grid Optimal</span>
+          <h2>3. Two-Dimensional Surface: Analytics Dashboard</h2>
+          <p>CSS Grid excels when organizing diverse widgets across coordinated horizontal and vertical tracks.</p>
+        </div>
+
+        <div class="demo-box grid-demo-wrapper">
+          <div class="grid-dashboard">
+            <div class="grid-cell cell-kpi">
+              <span class="cell-label">Total Visits</span>
+              <h3>48,290</h3>
+              <small>+14.2% from last month</small>
+            </div>
+            <div class="grid-cell cell-kpi">
+              <span class="cell-label">Lab Completion</span>
+              <h3>13 / 13</h3>
+              <small>100% evaluated</small>
+            </div>
+            <div class="grid-cell cell-chart">
+              <span class="cell-label">Traffic Distribution (Span 2 Columns)</span>
+              <div class="fake-chart">
+                <div class="bar" style="height: 60%;"></div>
+                <div class="bar" style="height: 85%;"></div>
+                <div class="bar" style="height: 45%;"></div>
+                <div class="bar" style="height: 95%;"></div>
+                <div class="bar" style="height: 70%;"></div>
+              </div>
+            </div>
+            <div class="grid-cell cell-activity">
+              <span class="cell-label">Recent Activity Feed</span>
+              <ul>
+                <li>Commit <code>1007caa</code> pushed to origin</li>
+                <li>P1-P13 verified against syllabus</li>
+                <li>All semantic validations passed</li>
+              </ul>
+            </div>
+          </div>
+          <p class="demo-caption">
+            <code>grid-template-columns: repeat(4, 1fr)</code> coordinates row and column alignment seamlessly across viewports.
+          </p>
+        </div>
+      </section>
+
+      <!-- Scenario 3: The Hybrid Ideal -->
+      <section class="section">
+        <div class="scenario-header">
+          <span class="tag-hybrid">Hybrid Architecture</span>
+          <h2>4. Industry Standard: Grid on the Macro, Flex on the Micro</h2>
+          <p>Professional frontends pair CSS Grid for page scaffolding and Flexbox for component internals.</p>
+        </div>
+
+        <div class="hybrid-card">
+          <div class="hybrid-inner">
+            <span class="blueprint-badge">Grid for Scaffolding + Flexbox for Components</span>
+            <h3>The Synthesis</h3>
+            <p>
+              Rather than choosing one exclusively, modern UI architectures use <strong>CSS Grid</strong> to define the overall page skeleton 
+              (header, sidebar, content, footer) and <strong>Flexbox</strong> inside individual components (aligning icons, badges, titles, and buttons).
+            </p>
+          </div>
+        </div>
+      </section>
+
+    </main>
+
+    <footer class="page-footer">
+      <p>&copy; 2026 Nilay Raj &middot; Web Development Lab &middot; Practical 13 Conclusion</p>
+    </footer>
+
+  </div>
+
+</body>
+</html>

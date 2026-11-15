@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Practical 09 – Responsive Navbar &amp; Card Grid using Flexbox</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Responsive Flexbox Navbar -->
+  <header class="flex-navbar">
+    <div class="nav-container">
+      <a href="#" class="brand">FlexEngine<span>.io</span></a>
+      <nav class="nav-links">
+        <a href="#overview">Overview</a>
+        <a href="#grid-demo">Flex Matrix</a>
+        <a href="#properties">Flex Properties</a>
+      </nav>
+      <div class="nav-action">
+        <a href="#grid-demo" class="btn-action">Explore Grid</a>
+      </div>
+    </div>
+  </header>
+
+  <main class="page-wrapper">
+
+    <!-- Hero Introduction -->
+    <section id="overview" class="flex-hero">
+      <span class="eyebrow">Practical 09 · 1D Layout System</span>
+      <h1>Responsive Navbar &amp; Card Grid via Flexbox</h1>
+      <p class="lead">
+        Exploring one-dimensional fluid distribution using <code>display: flex</code>, <code>flex-wrap</code>, 
+        and proportional sizing with <code>flex: 1 1 300px</code>.
+      </p>
+    </section>
+
+    <!-- Flexbox Card Grid Demonstration -->
+    <section id="grid-demo" class="section">
+      <div class="section-header">
+        <h2>Adaptive Flex Card Grid</h2>
+        <p>Resize your browser viewport to observe items wrapping automatically across rows while maintaining equal height.</p>
+      </div>
+
+      <div class="flex-card-grid">
+
+        <!-- Card 1 -->
+        <article class="flex-card">
+          <div class="card-pill">01 · Distribution</div>
+          <h3>Main Axis Alignment</h3>
+          <p>
+            Controlled via <code>justify-content</code>. Items can be distributed with <code>space-between</code>, 
+            <code>center</code>, or <code>flex-start</code> along the horizontal main axis.
+          </p>
+          <div class="card-footer">
+            <span class="tag">flex-direction: row</span>
+            <a href="#" class="card-link">Learn More &rarr;</a>
+          </div>
+        </article>
+
+        <!-- Card 2 -->
+        <article class="flex-card">
+          <div class="card-pill">02 · Alignment</div>
+          <h3>Cross Axis Alignment</h3>
+          <p>
+            Managed with <code>align-items: stretch</code>. Ensures all cards within the row automatically match the 
+            height of the tallest sibling without fixed heights.
+          </p>
+          <div class="card-footer">
+            <span class="tag">align-items: stretch</span>
+            <a href="#" class="card-link">Learn More &rarr;</a>
+          </div>
+        </article>
+
+        <!-- Card 3 -->
+        <article class="flex-card">
+          <div class="card-pill">03 · Fluid Wrapping</div>
+          <h3>Flexible Wrapping</h3>
+          <p>
+            Configured with <code>flex-wrap: wrap</code>. When viewport space is constrained, items wrap to the next line 
+            and expand evenly using <code>flex-grow: 1</code>.
+          </p>
+          <div class="card-footer">
+            <span class="tag">flex-wrap: wrap</span>
+            <a href="#" class="card-link">Learn More &rarr;</a>
+          </div>
+        </article>
+
+        <!-- Card 4 -->
+        <article class="flex-card">
+          <div class="card-pill">04 · Item Sizing</div>
+          <h3>Flex Basis &amp; Growth</h3>
+          <p>
+            The shorthand <code>flex: 1 1 280px</code> defines a base width of 280px while allowing cards to grow into available space 
+            or shrink on narrow viewports.
+          </p>
+          <div class="card-footer">
+            <span class="tag">flex: 1 1 280px</span>
+            <a href="#" class="card-link">Learn More &rarr;</a>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- Flexbox Reference Matrix -->
+    <section id="properties" class="section">
+      <div class="section-header">
+        <h2>Key Flexbox Rules in this Architecture</h2>
+      </div>
+
+      <div class="rules-flex-container">
+        <div class="rule-box">
+          <h4>Container Level</h4>
+          <ul>
+            <li><code>display: flex</code> &mdash; Activates the flex formatting context.</li>
+            <li><code>flex-wrap: wrap</code> &mdash; Prevents item overflow on small displays.</li>
+            <li><code>gap: 24px</code> &mdash; Creates uniform gutter spacing between flex items.</li>
+          </ul>
+        </div>
+        <div class="rule-box">
+          <h4>Item Level</h4>
+          <ul>
+            <li><code>flex: 1 1 280px</code> &mdash; Fluid growth, shrinkage, and ideal starting basis.</li>
+            <li><code>margin-top: auto</code> &mdash; Pushes card footers cleanly to the bottom.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="page-footer">
+    <p>&copy; 2026 Nilay Raj &middot; Web Development Lab &middot; Practical 09</p>
+  </footer>
+
+</body>
+</html>
