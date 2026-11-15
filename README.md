@@ -2,7 +2,7 @@
 
 - **Course:** Programming for Web Development – I Laboratory  
 - **Student:** Nilay Raj  
-- **Repository:** https://github.com/NilayOverp94/Web_Dev_Lab  
+- **Repository:** https://github.com/somyamoonat/Web_Dev_Lab  
 
 ---
 
