@@ -1,7 +1,7 @@
 # Programming for Web Development – I Laboratory
 
 - **Course:** Programming for Web Development – I Laboratory  
-- **Student:** Nilay Raj  
+- **Student:** Somya Moonat
 - **Repository:** https://github.com/somyamoonat/Web_Dev_Lab  
 
 ---
